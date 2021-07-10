@@ -1,0 +1,29 @@
+$primary-color: #fbfbfb;
+$secondary-color: #333;
+$tertiary-color: #eee;
+$size-sm: 0.8rem;
+$size-normal: 1rem;
+$size-lg: 2.5rem;
+$border-radius-default: 0.25rem;
+$border-default: 0.01rem solid #333;
+
+%normalize {
+  border-radius: $border-radius-default;
+  font-size: $size-normal;
+}
+%reset-logic {
+  border: none;
+  appearance: none;
+  -webkit-appearance: none;
+}
+%animated{
+  transition: all linear .5s;
+}
+@function hov($color) {
+  $result: darken($color, 5%);
+  @return $result;
+}
+@function act($color) {
+  $result: darken($color, 15%);
+  @return $result;
+}

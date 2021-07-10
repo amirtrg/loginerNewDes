@@ -1,0 +1,63 @@
+@import './../Design/basic';
+.HeaderApp {
+  color: #eee;
+  padding: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  nav {
+    a {
+      text-decoration: none;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      color: #111;
+      padding: 0.45rem;
+      margin: 0 0.3rem;
+      border-radius: 0.25rem;
+      border: 0.01rem solid #111;
+      background-color: rgba(209, 69, 14, 0.308);
+      backdrop-filter: blur(.5rem);
+      &:hover {
+        background-color: #eee;
+        border-color: #eee;
+      }
+    }
+  }
+  .menu {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    backdrop-filter: blur(.1rem);
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    background-color: rgba(0, 0, 0, 0.25);
+    ul {
+      list-style: none;
+      margin: 2.8rem;
+      background: rgba(238, 238, 238, 0.5);
+      border-radius: 0.25rem;
+      li {
+        margin: 1.5rem;
+        a {
+          transition: all linear 250ms;
+          margin: 0rem;
+          color: #333;
+          padding: 0.5rem;
+          border-radius: 0.25rem;
+          text-decoration: none;
+          font-size: 1rem;
+          &:hover {
+            background-color: transparentize($color: #eee, $amount: 0.25);
+          }
+        }
+      }
+    }
+  }
+  h1 {
+    text-transform: capitalize;
+  }
+}
